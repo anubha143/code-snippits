@@ -1,0 +1,107 @@
+.error {
+    background-color: #efacac;
+    border: double 4px darkred;
+    color: darkred;
+    padding: 1em;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .grid {
+    display: grid;
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+    border: 1px solid black;
+  }
+  .cell{
+    display: flex;
+    background-color: transparent;
+    border: 1px solid black;
+    height: 0;
+    padding-bottom: 100%;
+  }
+  .cell-activated {
+    background-color: green;
+  }
+  .table-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .user-search-container{
+    display: flex;
+    position: relative;
+  }
+  .user-search-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .user-search-input input{
+    border: none;
+    height: 20px;
+    padding: 5px;
+  }
+
+  .user-search-input input:focus {
+    outline: none;
+  }
+  .suggestions-list {
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 0;
+    /* margin-top: 6px; */
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    top: 25px;
+  }
+  .suggestions-list img {
+    height: 40px;
+    width: 40px;
+  }
+  .suggestions-list li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .suggestions-list li:hover{
+    background-color: #ccc;
+  }
+  suggestions-list li:last-child {
+    border-bottom: none;
+  }
+.user-chip {
+  min-width: 15%;
+  width: auto;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #808080;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 5px 10px;
+  gap: 5px;
+}
+.user-chip img {
+  height: 20px;
+}
+.active{
+  background-color: #ccc;
+}
