@@ -23,9 +23,9 @@ function App() {
       {/* <div>
         <PasswordGenerator />
       </div> */}
-      {/* <div>
+      <div>
         <GridLights />
-      </div> */}
+      </div>
       {/* <div className="table-wrapper">
         <DataTable />
       </div> */}
@@ -37,9 +37,9 @@ function App() {
           setSearchTerms={setSearchTerms}
         />
       </div> */}
-      <div>
+      {/* <div>
         <MultiSelect />
-      </div>
+      </div> */}
     </>
   );
 }
