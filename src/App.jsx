@@ -8,6 +8,7 @@ import HighlightedText from "./components/highlightText/HighlightedText";
 import PasswordGenerator from "./components/passwordGenerator/PasswordGenerator";
 import DataTable from "./components/table/Table";
 import MultiSelect from "./components/multiSelect/MultiSelect";
+import TrafficLight from "./components/trafficLight/TrafficLight";
 
 function App() {
   const searchText = "React is awesome!";
@@ -23,9 +24,9 @@ function App() {
       {/* <div>
         <PasswordGenerator />
       </div> */}
-      <div>
+      {/* <div>
         <GridLights />
-      </div>
+      </div> */}
       {/* <div className="table-wrapper">
         <DataTable />
       </div> */}
@@ -40,6 +41,9 @@ function App() {
       {/* <div>
         <MultiSelect />
       </div> */}
+      <div>
+        <TrafficLight />
+      </div>
     </>
   );
 }
