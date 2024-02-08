@@ -9,6 +9,7 @@ import PasswordGenerator from "./components/passwordGenerator/PasswordGenerator"
 import DataTable from "./components/table/Table";
 import MultiSelect from "./components/multiSelect/MultiSelect";
 import TrafficLight from "./components/trafficLight/TrafficLight";
+import Tictactoe from "./components/tictactoe/Tictactoe";
 
 function App() {
   const searchText = "React is awesome!";
@@ -41,8 +42,11 @@ function App() {
       {/* <div>
         <MultiSelect />
       </div> */}
-      <div>
+      {/* <div>
         <TrafficLight />
+      </div> */}
+      <div>
+        <Tictactoe />
       </div>
     </>
   );
