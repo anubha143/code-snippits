@@ -10,6 +10,7 @@ import DataTable from "./components/table/Table";
 import MultiSelect from "./components/multiSelect/MultiSelect";
 import TrafficLight from "./components/trafficLight/TrafficLight";
 import Tictactoe from "./components/tictactoe/Tictactoe";
+import AgeCalculator from "./components/ageCalculator/AgeCalculator";
 
 function App() {
   const searchText = "React is awesome!";
@@ -45,8 +46,11 @@ function App() {
       {/* <div>
         <TrafficLight />
       </div> */}
-      <div>
+      {/* <div>
         <Tictactoe />
+      </div> */}
+      <div>
+        <AgeCalculator />
       </div>
     </>
   );
