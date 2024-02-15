@@ -165,3 +165,39 @@
   align-items: center;
   justify-content: center;
 }
+.otp-wrapper{
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.otp-box{
+  height: 400px;
+  width: 500px;
+  background-color: black;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.otp-title{
+  color: aliceblue;
+  /* padding: 8px; */
+}
+.otp-button{
+  padding: 12px;
+  background-color: blueviolet;
+  color: #ccc;
+  border-radius: 8px;
+  outline: none;
+  margin: 24px;
+  border: none;
+}
+.otp-number{
+  padding: 12px;
+  color: #ccc;
+  white-space: pre;
+   background-color:  #3b3c36;
+  margin: 24px;
+}

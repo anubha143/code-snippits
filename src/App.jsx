@@ -11,6 +11,7 @@ import MultiSelect from "./components/multiSelect/MultiSelect";
 import TrafficLight from "./components/trafficLight/TrafficLight";
 import Tictactoe from "./components/tictactoe/Tictactoe";
 import AgeCalculator from "./components/ageCalculator/AgeCalculator";
+import OTPGenerator from "./components/otpGenerator/OTPGenerator";
 
 function App() {
   const searchText = "React is awesome!";
@@ -49,8 +50,11 @@ function App() {
       {/* <div>
         <Tictactoe />
       </div> */}
-      <div>
+      {/* <div>
         <AgeCalculator />
+      </div> */}
+      <div>
+        <OTPGenerator />
       </div>
     </>
   );
