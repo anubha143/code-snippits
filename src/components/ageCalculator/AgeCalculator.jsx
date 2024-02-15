@@ -19,15 +19,40 @@ const AgeCalculator = () => {
   };
 
   const handleSubmit = () => {
-    const month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const presentDate = new Date("2028-June-26");
+    const isLeapYear = (year) => {
+      return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+    };
+
+    // Calculate the number of leap years between birth year and present year
+    let leapYears = 0;
+    for (let year = info.year; year <= presentDate.getFullYear(); year++) {
+      if (isLeapYear(year)) {
+        leapYears++;
+      }
+    }
+    const month = [
+      31,
+      isLeapYear(info.year) ? 28 + leapYears : 28,
+      31,
+      30,
+      31,
+      30,
+      31,
+      31,
+      30,
+      31,
+      30,
+      31,
+    ];
     const birthDate = new Date(`${info.year}-${info.month}-${info.date}`);
-    const presentDate = new Date("2027-May-27");
+
     let days = presentDate.getDate() - birthDate.getDate();
     let months = presentDate.getMonth() - birthDate.getMonth();
     let years = presentDate.getFullYear() - birthDate.getFullYear();
     if (days < 0) {
       months -= 1;
-      days += month[presentDate.getMonth()];
+      days += month[presentDate.getMonth() - 1];
     }
 
     if (months < 0) {
