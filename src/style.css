@@ -201,3 +201,32 @@
    background-color:  #3b3c36;
   margin: 24px;
 }
+.job-board-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+  gap: 20px;
+}
+.job-board-single-job{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 24px;
+ 
+}
+.job-board-header{
+  padding: 24px;
+}
+.grid-generator-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.grid-generator-input{
+  display: flex;
+  gap: 12px;
+}

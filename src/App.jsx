@@ -12,6 +12,10 @@ import TrafficLight from "./components/trafficLight/TrafficLight";
 import Tictactoe from "./components/tictactoe/Tictactoe";
 import AgeCalculator from "./components/ageCalculator/AgeCalculator";
 import OTPGenerator from "./components/otpGenerator/OTPGenerator";
+import PalindromeCheck from "./components/palindromeChecker/PalindromeCheck";
+import StarRating from "./components/starRating/StarRating";
+import JobBoard from "./components/jobBoard/JobBoard";
+import GridGenerator from "./components/gridGenerator/GridGenerator";
 
 function App() {
   const searchText = "React is awesome!";
@@ -53,8 +57,20 @@ function App() {
       {/* <div>
         <AgeCalculator />
       </div> */}
-      <div>
+      {/* <div>
         <OTPGenerator />
+      </div> */}
+      {/* <div>
+        <PalindromeCheck />
+      </div> */}
+      {/* <div>
+        <StarRating />
+      </div> */}
+      {/* <div>
+        <JobBoard />
+      </div> */}
+      <div>
+        <GridGenerator />
       </div>
     </>
   );
