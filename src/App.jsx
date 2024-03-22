@@ -16,6 +16,8 @@ import PalindromeCheck from "./components/palindromeChecker/PalindromeCheck";
 import StarRating from "./components/starRating/StarRating";
 import JobBoard from "./components/jobBoard/JobBoard";
 import GridGenerator from "./components/gridGenerator/GridGenerator";
+import TablePagination from "./components/tablePagination/TablePagination";
+import ParentComponent from "./components/uniDirectionalDataFolw/ParentComponent";
 
 function App() {
   const searchText = "React is awesome!";
@@ -69,8 +71,14 @@ function App() {
       {/* <div>
         <JobBoard />
       </div> */}
-      <div>
+      {/* <div>
         <GridGenerator />
+      </div> */}
+      {/* <div>
+        <TablePagination />
+      </div> */}
+      <div>
+        <ParentComponent />
       </div>
     </>
   );

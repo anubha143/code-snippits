@@ -41,25 +41,26 @@ const GridGenerator = () => {
         </button>
       </div>
       <div>
-        {grid?.map((item, i) => (
-          <div key={i} style={{ display: "flex" }}>
-            {item?.map((cell, c) => (
-              <div
-                key={c}
-                style={{
-                  border: "1px solid black",
-                  height: "50px",
-                  width: "50px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                {cell}
-              </div>
-            ))}
-          </div>
-        ))}
+        {grid.length > 0 &&
+          grid?.map((item, i) => (
+            <div key={i} style={{ display: "flex" }}>
+              {item?.map((cell, c) => (
+                <div
+                  key={c}
+                  style={{
+                    border: "1px solid black",
+                    height: "50px",
+                    width: "50px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {cell}
+                </div>
+              ))}
+            </div>
+          ))}
       </div>
     </div>
   );
