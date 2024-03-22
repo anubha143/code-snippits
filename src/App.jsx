@@ -19,6 +19,7 @@ import GridGenerator from "./components/gridGenerator/GridGenerator";
 import TablePagination from "./components/tablePagination/TablePagination";
 import ParentComponent from "./components/uniDirectionalDataFolw/ParentComponent";
 import Pagination from "./components/Pagination/Pagination";
+import PaginationBackend from "./components/Pagination/PaginationBackend";
 
 function App() {
   const searchText = "React is awesome!";
@@ -81,8 +82,11 @@ function App() {
       {/* <div>
         <ParentComponent />
       </div> */}
-      <div>
+      {/* <div>
         <Pagination />
+      </div> */}
+      <div>
+        <PaginationBackend />
       </div>
     </>
   );
