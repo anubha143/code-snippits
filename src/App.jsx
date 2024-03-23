@@ -20,6 +20,7 @@ import TablePagination from "./components/tablePagination/TablePagination";
 import ParentComponent from "./components/uniDirectionalDataFolw/ParentComponent";
 import Pagination from "./components/Pagination/Pagination";
 import PaginationBackend from "./components/Pagination/PaginationBackend";
+import Todo from "./components/todo/Todo";
 
 function App() {
   const searchText = "React is awesome!";
@@ -85,8 +86,11 @@ function App() {
       {/* <div>
         <Pagination />
       </div> */}
-      <div>
+      {/* <div>
         <PaginationBackend />
+      </div> */}
+      <div>
+        <Todo />
       </div>
     </>
   );
