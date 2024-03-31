@@ -39,9 +39,9 @@ function App() {
       {/* <div>
         <GridLights />
       </div> */}
-      {/* <div className="table-wrapper">
+      <div className="table-wrapper">
         <DataTable />
-      </div> */}
+      </div>
       {/* <div>
         <h2>Search Results:</h2>
         <HighlightedText
@@ -89,9 +89,9 @@ function App() {
       {/* <div>
         <PaginationBackend />
       </div> */}
-      <div>
+      {/* <div>
         <Todo />
-      </div>
+      </div> */}
     </>
   );
 }

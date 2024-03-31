@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../style.css";
 
 const Todo = () => {
   const [todo, setTodo] = useState("");
   const [todolist, setTodolist] = useState([]);
   const [isEditable, setIsEditable] = useState("");
+  const inputRef = useRef();
 
   const handleSave = (e) => {
     e.preventDefault();
@@ -36,6 +37,10 @@ const Todo = () => {
   };
 
   useEffect(() => {
+    inputRef.current.focus();
+  }, [todo]);
+
+  useEffect(() => {
     console.log("todolist", todolist);
   }, [todolist]);
 
@@ -48,6 +53,7 @@ const Todo = () => {
             type="text"
             value={todo}
             onChange={(e) => setTodo(e.target.value)}
+            ref={inputRef}
           />
           <button type="submit">{isEditable ? "Edit" : "Go"}</button>
         </form>
