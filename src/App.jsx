@@ -21,6 +21,7 @@ import ParentComponent from "./components/uniDirectionalDataFolw/ParentComponent
 import Pagination from "./components/Pagination/Pagination";
 import PaginationBackend from "./components/Pagination/PaginationBackend";
 import Todo from "./components/todo/Todo";
+import DragNDrop from "./components/dragNdrop/DragNDrop";
 
 function App() {
   const searchText = "React is awesome!";
@@ -39,9 +40,9 @@ function App() {
       {/* <div>
         <GridLights />
       </div> */}
-      <div className="table-wrapper">
+      {/* <div className="table-wrapper">
         <DataTable />
-      </div>
+      </div> */}
       {/* <div>
         <h2>Search Results:</h2>
         <HighlightedText
@@ -92,6 +93,9 @@ function App() {
       {/* <div>
         <Todo />
       </div> */}
+      <div>
+        <DragNDrop />
+      </div>
     </>
   );
 }
