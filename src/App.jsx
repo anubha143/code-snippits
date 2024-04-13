@@ -22,6 +22,7 @@ import Pagination from "./components/Pagination/Pagination";
 import PaginationBackend from "./components/Pagination/PaginationBackend";
 import Todo from "./components/todo/Todo";
 import DragNDrop from "./components/dragNdrop/DragNDrop";
+import ColorPalatte from "./components/colorPalatte/ColorPalatte";
 
 function App() {
   const searchText = "React is awesome!";
@@ -93,8 +94,11 @@ function App() {
       {/* <div>
         <Todo />
       </div> */}
-      <div>
+      {/* <div>
         <DragNDrop />
+      </div> */}
+      <div>
+        <ColorPalatte />
       </div>
     </>
   );
