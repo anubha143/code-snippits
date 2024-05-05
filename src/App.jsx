@@ -24,6 +24,7 @@ import Todo from "./components/todo/Todo";
 import DragNDrop from "./components/dragNdrop/DragNDrop";
 import ColorPalatte from "./components/colorPalatte/ColorPalatte";
 import SquareBox from "./components/squareBox/SquareBox";
+import UpDown from "./components/upDown/UpDown";
 
 function App() {
   const searchText = "React is awesome!";
@@ -101,8 +102,11 @@ function App() {
       {/* <div>
         <ColorPalatte />
       </div> */}
-      <div>
+      {/* <div>
         <SquareBox />
+      </div> */}
+      <div>
+        <UpDown />
       </div>
     </>
   );
