@@ -29,33 +29,45 @@ const UpDown = () => {
     },
   ];
   const [displayData, setDisplayData] = useState(data);
-  const handleClick = (type, index) => {
-    if (type === "Down" && index != displayData.length - 1) {
-      let operate = [...displayData];
-      [operate[index], operate[index + 1]] = [
-        operate[index + 1],
-        operate[index],
-      ];
-      setDisplayData(operate);
-    } else if (type === "Up" && index != 0) {
-      let operate = [...displayData];
-      [operate[index], operate[index - 1]] = [
-        operate[index - 1],
-        operate[index],
-      ];
-      setDisplayData(operate);
-    } else if (type === "Down") {
-      let operate = [...displayData];
-      const result = [
-        operate[operate.length - 1],
-        ...operate.slice(0, operate.length - 1),
-      ];
-      setDisplayData(result);
-    } else if (type === "Up") {
-      let operate = [...displayData];
-      const result = [...operate.slice(1, operate.length), operate[0]];
-      setDisplayData(result);
+  const handleClick = (index) => {
+    let arr = [...displayData];
+    const type = displayData[index].type;
+    let newPos = index;
+    if (type === "Down") {
+      newPos = (index + 1) % displayData.length;
+    } else {
+      newPos = index === 0 ? displayData.length - 1 : index - 1;
     }
+    let itemRemoved = arr.splice(index, 1); // removed the item where user clicked
+    arr.splice(newPos, 0, itemRemoved[0]);
+    setDisplayData(arr);
+
+    // if (type === "Down" && index != displayData.length - 1) {
+    //   let operate = [...displayData];
+    //   [operate[index], operate[index + 1]] = [
+    //     operate[index + 1],
+    //     operate[index],
+    //   ];
+    //   setDisplayData(operate);
+    // } else if (type === "Up" && index != 0) {
+    //   let operate = [...displayData];
+    //   [operate[index], operate[index - 1]] = [
+    //     operate[index - 1],
+    //     operate[index],
+    //   ];
+    //   setDisplayData(operate);
+    // } else if (type === "Down") {
+    //   let operate = [...displayData];
+    //   const result = [
+    //     operate[operate.length - 1],
+    //     ...operate.slice(0, operate.length - 1),
+    //   ];
+    //   setDisplayData(result);
+    // } else if (type === "Up") {
+    //   let operate = [...displayData];
+    //   const result = [...operate.slice(1, operate.length), operate[0]];
+    //   setDisplayData(result);
+    // }
   };
 
   return (
@@ -70,9 +82,7 @@ const UpDown = () => {
             }}
           >
             <li>{item?.text}</li>
-            <button onClick={() => handleClick(item?.type, i)}>
-              {item?.type}
-            </button>
+            <button onClick={() => handleClick(i)}>{item?.type}</button>
           </div>
         </ul>
       ))}
