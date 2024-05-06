@@ -25,6 +25,7 @@ import DragNDrop from "./components/dragNdrop/DragNDrop";
 import ColorPalatte from "./components/colorPalatte/ColorPalatte";
 import SquareBox from "./components/squareBox/SquareBox";
 import UpDown from "./components/upDown/UpDown";
+import ShuffleColors from "./components/shuffleColors/ShuffleColors";
 
 function App() {
   const searchText = "React is awesome!";
@@ -105,8 +106,11 @@ function App() {
       {/* <div>
         <SquareBox />
       </div> */}
-      <div>
+      {/* <div>
         <UpDown />
+      </div> */}
+      <div>
+        <ShuffleColors />
       </div>
     </>
   );
