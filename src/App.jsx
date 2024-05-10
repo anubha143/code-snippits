@@ -26,6 +26,7 @@ import ColorPalatte from "./components/colorPalatte/ColorPalatte";
 import SquareBox from "./components/squareBox/SquareBox";
 import UpDown from "./components/upDown/UpDown";
 import ShuffleColors from "./components/shuffleColors/ShuffleColors";
+import UpDownAdvance from "./components/upDownAdvance/UpDownAdvance";
 
 function App() {
   const searchText = "React is awesome!";
@@ -109,8 +110,11 @@ function App() {
       {/* <div>
         <UpDown />
       </div> */}
-      <div>
+      {/* <div>
         <ShuffleColors />
+      </div> */}
+      <div>
+        <UpDownAdvance />
       </div>
     </>
   );
