@@ -27,6 +27,7 @@ import SquareBox from "./components/squareBox/SquareBox";
 import UpDown from "./components/upDown/UpDown";
 import ShuffleColors from "./components/shuffleColors/ShuffleColors";
 import UpDownAdvance from "./components/upDownAdvance/UpDownAdvance";
+import CircularQueue from "./components/circularQueue/CircularQueue";
 
 function App() {
   const searchText = "React is awesome!";
@@ -113,8 +114,11 @@ function App() {
       {/* <div>
         <ShuffleColors />
       </div> */}
-      <div>
+      {/* <div>
         <UpDownAdvance />
+      </div> */}
+      <div>
+        <CircularQueue />
       </div>
     </>
   );
