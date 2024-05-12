@@ -28,6 +28,7 @@ import UpDown from "./components/upDown/UpDown";
 import ShuffleColors from "./components/shuffleColors/ShuffleColors";
 import UpDownAdvance from "./components/upDownAdvance/UpDownAdvance";
 import CircularQueue from "./components/circularQueue/CircularQueue";
+import BoxVisualization from "./components/boxVisualization/BoxVisualization";
 
 function App() {
   const searchText = "React is awesome!";
@@ -117,8 +118,11 @@ function App() {
       {/* <div>
         <UpDownAdvance />
       </div> */}
-      <div>
+      {/* <div>
         <CircularQueue />
+      </div> */}
+      <div>
+        <BoxVisualization />
       </div>
     </>
   );

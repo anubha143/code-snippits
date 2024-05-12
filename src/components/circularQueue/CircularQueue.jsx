@@ -91,6 +91,7 @@ const CircularQueue = () => {
           onChange={handleInput}
           placeholder="Enter number"
           style={{ outline: "1px solid black", width: "90%" }}
+          autoFocus
         />
         <button onClick={handleAdd}>Add</button>
         <button onClick={handleDelete} disabled={boxes.length === 0}>
