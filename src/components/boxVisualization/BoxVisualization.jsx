@@ -6,18 +6,17 @@ const BoxVisualization = () => {
   const [dataArr, setDataArr] = useState(data);
   const [isSortingPaused, setIsSortingPaused] = useState(false);
   const timeoutRef = useRef(null);
+  const [speed, setSpeed] = useState("800");
 
   function useDidUpdateEffect(fn, inputs) {
     const isMountingRef = useRef(false);
 
     useEffect(() => {
       isMountingRef.current = true;
-      console.log("this will run only once");
     }, []);
 
     useEffect(() => {
       if (!isMountingRef.current) {
-        console.log("this will run again and again");
         return fn();
       } else {
         isMountingRef.current = false;
@@ -26,7 +25,6 @@ const BoxVisualization = () => {
   }
 
   const handleStartSorting = () => {
-    console.log("in the sorting function");
     let newArr = [...dataArr];
     let i = 0,
       j = 0;
@@ -42,16 +40,12 @@ const BoxVisualization = () => {
           i++;
           j = 0;
         }
-        timeoutRef.current = setTimeout(sortStep, 800); // Call sortStep again after a delay to simulate step-by-step sorting
+        timeoutRef.current = setTimeout(sortStep, +speed); // Call sortStep again after a delay to simulate step-by-step sorting
       }
     };
 
     sortStep(); // Start the sorting process
   };
-
-  useEffect(() => {
-    console.log("dataArr", dataArr);
-  }, [dataArr]);
 
   useDidUpdateEffect(() => {
     if (!isSortingPaused) {
@@ -60,23 +54,23 @@ const BoxVisualization = () => {
   }, [isSortingPaused]);
 
   const handlePause = () => {
-    console.log("in the pause");
     clearTimeout(timeoutRef.current);
     setIsSortingPaused(true);
   };
 
   const handleReset = () => {
-    console.log("in the reset");
     clearTimeout(timeoutRef.current);
     setDataArr(data);
     setIsSortingPaused(false);
   };
 
   const handleResume = () => {
-    console.log("in the resume");
     setIsSortingPaused(false);
-    console.log("debugging");
-    // handleStartSorting();
+  };
+
+  const handleSpeed = (e) => {
+    const value = e.target.value;
+    setSpeed(value);
   };
 
   return (
@@ -117,6 +111,16 @@ const BoxVisualization = () => {
         <button onClick={handlePause}>Pause</button>
         <button onClick={handleResume}>Resume</button>
         <button onClick={handleReset}>Reset</button>
+        <select
+          style={{ marginLeft: "12px" }}
+          id="comboA"
+          onChange={handleSpeed}
+          value={speed}
+        >
+          <option value="500">Fast</option>
+          <option value="800">Medium</option>
+          <option value="1500">Slow</option>
+        </select>
       </div>
     </div>
   );
